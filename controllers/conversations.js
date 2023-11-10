@@ -10,7 +10,7 @@ exports.postCrateGroup = (req, res, next) => {
         return res.json({ errorMessage: errors.array()[0].msg, oldInput: { groupName: groupName, image: image, groupUsers: groupUsers } });
     }
     const newGroupUsers = groupUsers.map(user => { return { id: user.userId, image: user.image, name: user.name } });
-    const conversation = new Conversation({ new: true, name: groupName, image: 'http://localhost:8000/' + image.path.replace('\\', '/'), secondUserName: groupName, conversationUsers: newGroupUsers });
+    const conversation = new Conversation({ new: true, name: groupName, image: 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/'), secondUserName: groupName, conversationUsers: newGroupUsers });
     conversation.save()
         .then(conversation => {
             res.json(conversation);

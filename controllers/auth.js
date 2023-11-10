@@ -16,7 +16,7 @@ exports.postSignup = (req, res, next) => {
     }
     bcrypt.hash(password, 12)
         .then(hashedPassword => {
-            const user = new User({ name: name, image: 'http://localhost:8000/' + image.path.replace('\\', '/'), email: email, password: hashedPassword });
+            const user = new User({ name: name, image: 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/'), email: email, password: hashedPassword });
             return user.save();
         })
         .then(result => {
@@ -85,7 +85,7 @@ exports.postChangeImage = (req, res, next) => {
     } else {
         User.findOne({ _id: id })
             .then(user => {
-                user.image = 'http://localhost:8000/' + image.path.replace('\\', '/')
+                user.image = 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/')
                 user.save()
                 return user.image
             })
@@ -93,16 +93,16 @@ exports.postChangeImage = (req, res, next) => {
                 Conversation.find({ "conversationUsers.id": { "$in": id } })
                     .then(conversations => {
                         conversations.map(conversation => {
-                            conversation.conversationUsers.filter(user => user.id.toString() === id)[0].image = 'http://localhost:8000/' + image.path.replace('\\', '/')
+                            conversation.conversationUsers.filter(user => user.id.toString() === id)[0].image = 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/')
                             conversation.messages.filter(message => message.messageUser.toString() === id).map(message => {
-                                message.image = 'http://localhost:8000/' + image.path.replace('\\', '/')
+                                message.image = 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/')
                             })
                             conversation.save()
                         })
                         return conversations
                     })
                     .then(conversations => {
-                        return res.json({ conversations: conversations, image: 'http://localhost:8000/' + image.path.replace('\\', '/') })
+                        return res.json({ conversations: conversations, image: 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/') })
                     })
             })
             .catch(err => {
