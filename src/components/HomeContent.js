@@ -26,7 +26,7 @@ const HomeContent = () => {
     // console.log(window);
     useEffect(() => {
         if (!localStorageIsAuth) {
-            navigate('/login');
+            navigate('/live-chat/login');
         } else {
             const expiryDate = localStorage.getItem('expiryDate');
             setAutoLogout(new Date(expiryDate).getTime() - new Date(new Date()).getTime());
