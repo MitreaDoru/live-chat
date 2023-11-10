@@ -122,5 +122,5 @@ app.use((error, req, res, next) => {
 });
 mongoose.connect(MONGODB_URI)
     .then(result => {
-        httpServer.listen(8000);
+        httpServer.listen(3000);
     }).catch(err => console.log(err))
