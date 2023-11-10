@@ -15,7 +15,7 @@ const app = express();
 const httpServer = require("http").createServer(app);
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: 'https://mitreadoru.github.io/live-chat/'
+        origin: 'https://live-chat-scql.onrender.com/'
     }
 });
 
@@ -122,5 +122,5 @@ app.use((error, req, res, next) => {
 });
 mongoose.connect(MONGODB_URI)
     .then(result => {
-        httpServer.listen();
+        httpServer.listen(3000);
     }).catch(err => console.log(err))
