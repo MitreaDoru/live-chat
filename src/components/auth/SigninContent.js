@@ -43,7 +43,7 @@ const Signin = () => {
                     setPassword(data.oldInput.password);
                     setErrorMessage(data.errorMessage);
                 } else {
-                    navigate('/login');
+                    navigate('/live-chat/login');
                 }
             })
     }

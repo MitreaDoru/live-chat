@@ -48,7 +48,7 @@ const HomeContent = () => {
     const setAutoLogout = milliseconds => {
         setTimeout(() => {
             logoutHandler();
-            navigate('/login');
+            navigate('/live-chat/login');
         }, milliseconds);
     };
     useEffect(() => {

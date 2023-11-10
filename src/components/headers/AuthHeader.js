@@ -18,7 +18,7 @@ const HomeHeader = () => {
         localStorage.removeItem('userId');
         localStorage.removeItem('isAuth');
         localStorage.removeItem('image');
-        navigate('/login');
+        navigate('/live-chat/login');
     }
     return (
         <Fragment>
@@ -27,9 +27,9 @@ const HomeHeader = () => {
                 <nav>
                     <ul>
                         <li>
-                            {!localStorageIsAuth && <Link to='/signin'>Signin</Link>}
-                            {localStorageIsAuth && <Link onClick={logoutHandler} to='/login'>Logout</Link>}
-                            {!localStorageIsAuth && <Link to='/login'>Login</Link>}
+                            {!localStorageIsAuth && <Link to='/live-chat/signin'>Signin</Link>}
+                            {localStorageIsAuth && <Link onClick={logoutHandler} to='/live-chat/login'>Logout</Link>}
+                            {!localStorageIsAuth && <Link to='/live-chat/login'>Login</Link>}
                         </li>
                     </ul>
                 </nav>

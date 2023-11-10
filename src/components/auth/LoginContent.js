@@ -45,7 +45,7 @@ const Login = () => {
                         new Date().getTime() + remainingMilliseconds
                     );
                     localStorage.setItem('expiryDate', expiryDate);
-                    navigate('/');
+                    navigate('/live-chat');
                 }
             })
             .catch(err => {

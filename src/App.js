@@ -9,12 +9,12 @@ import { socket, SocketContext } from './socket';
 
 const router = createBrowserRouter([
   {
-    path: '/', element: <AuthHeader />, children: [
+    path: '/live-chat', element: <AuthHeader />, children: [
 
-      { path: '/signin', element: <Signin /> },
-      { path: '/login', element: <Login /> },
+      { path: '/live-chat/signin', element: <Signin /> },
+      { path: '/live-chat/login', element: <Login /> },
       // { path: '/resetpassword', element: <ResetPassword /> }
-      { path: '/', element: <Home /> }
+      { path: '/live-chat', element: <Home /> }
     ],
   },
 ])
