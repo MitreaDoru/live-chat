@@ -1,0 +1,188 @@
+.home {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.home p {
+  color: red;
+  margin-bottom: 1rem;
+}
+.home .container {
+  width: 75%;
+  height: 65%;
+  border: 1px solid black;
+  border-radius: 2rem;
+  display: flex;
+  background-color: white;
+  overflow: hidden;
+}
+
+.home .container .left {
+  width: 40%;
+  height: 100%;
+  border-right: 1px solid black;
+  /* display: none; */
+}
+
+.home .container .left .action {
+  width: 100%;
+  height: 10%;
+  border-bottom: 1px solid rgb(224, 216, 216);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: rgb(230, 226, 226);
+}
+
+.home .container .left .action img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.home .container .left .action button {
+  width: 20%;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+}
+
+.home .container .left .search {
+  width: 100%;
+  height: 5%;
+  border-bottom: 1px solid rgb(224, 216, 216);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.home .container .left .search input {
+  width: 100%;
+  height: 95%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(230, 226, 226);
+}
+
+.home .container .left .conversation,
+.home .container .right .conversation {
+  width: 100%;
+  height: 85%;
+}
+
+.home .container .left .conversationInfo,
+.home .container .right .conversationInfo {
+  width: 100%;
+  height: 10%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(224, 216, 216);
+}
+.home .container .right .conversationInfo {
+  height: 100%;
+  background-color: rgb(230, 226, 226);
+}
+
+.home .container .left .conversationInfo img,
+.home .container .right .conversationInfo img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.home .container .left .conversationInfo .conversationDetails,
+.home .container .right .conversationInfo .conversationDetails {
+  display: flex;
+  align-items: center;
+}
+
+.home .container .right {
+  width: 60%;
+  height: 100%;
+  /* display: none; */
+}
+.home .container .right .conversationInfo button {
+  width: 15%;
+  height: 40%;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+}
+
+.home .container .right .info {
+  width: 100%;
+  height: 10%;
+}
+
+.home .container .right .messages {
+  width: 100%;
+  height: 80%;
+  padding: 1rem;
+  background-image: url("https://www.wallpapersales.uk.com/wp-content/uploads/2021/10/G78300.jpg");
+}
+
+.home .container .right .messages .message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: row-reverse; */
+}
+
+.home .container .right .messages .message img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.home .container .right .messages .message .messageInfo {
+  display: flex;
+  /* flex-direction: row-reverse; */
+}
+
+.home .container .right .input {
+  width: 100%;
+  height: 10%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: rgb(230, 226, 226);
+}
+
+.home .container .right .input input {
+  width: 85%;
+  height: 80%;
+  padding: 0.5rem;
+  border: 1px solid rgb(224, 216, 216);
+  border-radius: 2rem;
+}
+.dontShow {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .home .container {
+    width: 1000px;
+    height: 800px;
+  }
+}
+@media screen and (max-width: 800px) {
+  .home .container .left {
+    width: 100%;
+    border: none;
+  }
+
+  .home .container .right {
+    width: 100%;
+  }
+}

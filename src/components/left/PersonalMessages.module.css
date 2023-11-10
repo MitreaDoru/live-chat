@@ -1,0 +1,30 @@
+.conversation {
+  width: 100%;
+  height: 85%;
+}
+.conversation a {
+  text-decoration: none;
+  color: black;
+}
+.conversationInfo {
+  width: 100%;
+  height: 10%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgb(224, 216, 216);
+}
+
+.conversationInfo img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 0.5rem;
+}
+
+.conversationInfo .conversationDetails {
+  display: flex;
+  align-items: center;
+}

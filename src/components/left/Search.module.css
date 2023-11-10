@@ -1,0 +1,32 @@
+.search {
+  width: 100%;
+  height: 5%;
+  border-bottom: 1px solid rgb(224, 216, 216);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.search input {
+  width: 100%;
+  height: 95%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgb(230, 226, 226);
+}
+.search button {
+  width: 8%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  font-size: x-large;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+}
+.search .groupNameInvalid {
+  border: 1px solid red;
+}
