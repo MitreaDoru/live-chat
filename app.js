@@ -15,7 +15,7 @@ const app = express();
 const httpServer = require("http").createServer(app);
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: 'https://live-chat-scql.onrender.com/'
+        origin: 'https://mitreadoru.github.io/live-chat'
     }
 });
 
