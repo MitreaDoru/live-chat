@@ -13,7 +13,6 @@ const router = createBrowserRouter([
 
       { path: '/live-chat/signin', element: <Signin /> },
       { path: '/live-chat/login', element: <Login /> },
-      // { path: '/resetpassword', element: <ResetPassword /> }
       { path: '/live-chat', element: <Home /> }
     ],
   },

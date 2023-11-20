@@ -16,14 +16,13 @@ const HomeContent = () => {
     const displayedChat = useSelector((state) => state.chat.displayedChat);
     const error = useSelector(state => state.chat.error);
     const showRight = useSelector(state => state.chat.showRight);
+    const windowWidth = useSelector(state => state.chat.windowWidth)
     //My data
     const localStorageIsAuth = localStorage.getItem('isAuth');
     const localStorageId = localStorage.getItem('userId');
     const token = localStorage.getItem('token');
     const image = localStorage.getItem('image');
     ////
-    const windowWidth = useSelector(state => state.chat.windowWidth)
-    // console.log(window);
     useEffect(() => {
         if (!localStorageIsAuth) {
             navigate('/live-chat/login');
