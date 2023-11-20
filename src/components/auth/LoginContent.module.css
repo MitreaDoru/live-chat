@@ -13,16 +13,19 @@
 }
 
 .login input {
+  outline: none;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid black;
   margin-bottom: 0.5rem;
   padding: 3px;
-  border-radius: 5px;
-  border: 1px solid black;
 }
 
 .login button {
   width: 3rem;
   background-color: transparent;
-  border: 1px solid black;
-  border-radius: 3px;
+  border: none;
+  margin-top: 0.5rem;
+  border-bottom: 1px solid black;
   cursor: pointer;
 }

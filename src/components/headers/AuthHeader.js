@@ -23,7 +23,7 @@ const HomeHeader = () => {
     return (
         <Fragment>
             <header className={styled.header}>
-                <div className={styled.name} onClick={() => navigate('/')}>Live Chat</div>
+                <div className={styled.name} onClick={() => navigate('/live-chat')}>Live Chat</div>
                 <nav>
                     <ul>
                         <li>

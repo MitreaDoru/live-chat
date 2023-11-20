@@ -53,7 +53,6 @@ const Login = () => {
             })
     }
 
-
     return (
         <div className={styled.loginContainer}>
             <form onSubmit={loginHandler} className={styled.login}>

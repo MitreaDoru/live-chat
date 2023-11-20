@@ -40,7 +40,10 @@ const CreateChat = () => {
             .then(result => result.json())
             .then(data => {
                 if (data.errorMessage) {
-                    console.log('error');
+                    if (!data.goodFile) {
+                        dispatch(chatAction.createGroup(false));
+                        dispatch(chatAction.groupImageIsSelected(false))
+                    }
                     dispatch(chatAction.error(data.errorMessage));
                     dispatch(chatAction.groupUsers(data.oldInput.groupUsers));
                 } else {

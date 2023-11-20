@@ -18,6 +18,7 @@ const Signin = () => {
         setPassword(e.target.value);
     }
     const imageChangeHandler = (e) => {
+        e.preventDefault()
         setImage(e.target.files[0])
     }
 
@@ -37,9 +38,9 @@ const Signin = () => {
             .then(result => result.json())
             .then(data => {
                 if (!data.message) {
+                    console.log(data.oldInput.image);
                     setName(data.oldInput.name);
                     setEmail(data.oldInput.email);
-                    setImage(data.oldInput.image)
                     setPassword(data.oldInput.password);
                     setErrorMessage(data.errorMessage);
                 } else {
@@ -51,15 +52,16 @@ const Signin = () => {
     return (
         <div className={styled.signinContainer}>
             <form onSubmit={signinHandler} className={styled.signin} >
-                <p>{errorMessage}</p>
                 <label htmlFor="name">Name</label>
                 <input onChange={nameChangeHandler} type="text" name="name" value={name}></input>
-                <label htmlFor="image">Avatar</label>
-                <input onChange={imageChangeHandler} type="file" name="image" id="image" ></input>
                 <label htmlFor="email">E-mail</label>
                 <input onChange={emailChangeHandler} type="email" name="email" value={email}></input>
                 <label htmlFor="password">Password</label>
                 <input onChange={passwordChangeHandler} type="password" name="password" value={password}></input>
+                <label htmlFor="image">Avatar
+                    <input className={styled.image} onChange={imageChangeHandler} type="file" name="image" id="image"></input>
+                </label>
+                <p>{errorMessage}</p>
                 <button type="submit">Signin</button>
             </form>
         </div>
@@ -68,3 +70,4 @@ const Signin = () => {
 }
 
 export default Signin
+
