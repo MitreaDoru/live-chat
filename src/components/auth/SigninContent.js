@@ -44,7 +44,7 @@ const Signin = () => {
                     setPassword(data.oldInput.password);
                     setErrorMessage(data.errorMessage);
                 } else {
-                    navigate('/live-chat/login');
+                    navigate('/login');
                 }
             })
     }
