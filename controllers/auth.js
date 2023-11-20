@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator')
 require('dotenv').config();
-const multer = require('../multer');
 exports.postSignup = (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
