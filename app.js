@@ -13,7 +13,7 @@ const app = express();
 const httpServer = require("http").createServer(app);
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: 'https://mitreadoru.github.io'
+        origin: 'https://live-chat-rest-api.netlify.app'
     }
 });
 
