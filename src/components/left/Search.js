@@ -36,6 +36,8 @@ const Search = () => {
     const backHandler = () => {
         const newAgenda = agenda.map(user => user.isChecked ? { ...user, isChecked: !user.isChecked } : user);
         dispatch(chatAction.userAgenda(newAgenda));
+        dispatch(chatAction.filteredAgendaNotFound(false));
+        dispatch(chatAction.filteredAgenda(agenda));
         dispatch(chatAction.groupUsers(false));
         dispatch(chatAction.isSearching(false));
         dispatch(chatAction.createGroup(false));

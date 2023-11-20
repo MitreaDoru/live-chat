@@ -51,6 +51,8 @@ const CreateChat = () => {
                     dispatch(chatAction.groupName(''));
                     dispatch(chatAction.groupUsers(false));
                     const newAgenda = agenda.map(user => user.isChecked ? { ...user, isChecked: false } : user);
+                    dispatch(chatAction.filteredAgendaNotFound(false));
+                    dispatch(chatAction.filteredAgenda(agenda));
                     dispatch(chatAction.userAgenda(newAgenda));
                     dispatch(chatAction.createGroup(false));
                     dispatch(chatAction.isSearching(false));

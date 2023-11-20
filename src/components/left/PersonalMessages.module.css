@@ -1,6 +1,12 @@
 .conversation {
   width: 100%;
   height: 85%;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.conversation::-webkit-scrollbar {
+  display: none;
 }
 .conversation a {
   text-decoration: none;
