@@ -6,8 +6,12 @@ exports.postCrateGroup = (req, res, next) => {
     const groupUsers = JSON.parse(req.body.groupUsers);
     const image = req.file
     const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-        return res.json({ errorMessage: errors.array()[0].msg, oldInput: { groupName: groupName, image: image, groupUsers: groupUsers } });
+    if (!errors.isEmpty() || !image) {
+        if (!image) {
+            return res.json({ errorMessage: 'Try a .jpeg, .png, .jpg file', oldInput: { groupName: groupName, groupUsers: groupUsers }, goodFile: false })
+        } else {
+            return res.json({ errorMessage: errors.array()[0].msg, oldInput: { groupName: groupName, image: image, groupUsers: groupUsers } });
+        }
     }
     const newGroupUsers = groupUsers.map(user => { return { id: user.userId, image: user.image, name: user.name } });
     const conversation = new Conversation({ new: true, name: groupName, image: 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/'), secondUserName: groupName, conversationUsers: newGroupUsers });

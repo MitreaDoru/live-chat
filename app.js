@@ -8,8 +8,6 @@ const User = require('./models/user');
 const Conversation = require('./models/conversation');
 const authRoutes = require('./routes/auth');
 const conversationsRoutes = require('./routes/conversations');
-
-
 const MONGODB_URI = process.env.MONGODB_URI;
 const app = express();
 const httpServer = require("http").createServer(app);
@@ -48,14 +46,12 @@ const fileFilter = (req, file, cb) => {
         file.mimetype === 'image/jpg' ||
         file.mimetype === 'image/jpeg'
     ) {
-        console.log(file)
         cb(null, true);
     } else {
-        console.log('huha', file)
         cb(null, false);
-
     }
 };
+
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
@@ -122,5 +118,5 @@ app.use((error, req, res, next) => {
 });
 mongoose.connect(MONGODB_URI)
     .then(result => {
-        httpServer.listen(3000);
+        httpServer.listen(8000);
     }).catch(err => console.log(err))

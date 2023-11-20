@@ -4,19 +4,20 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { validationResult } = require('express-validator')
 require('dotenv').config();
+const multer = require('../multer');
 exports.postSignup = (req, res, next) => {
     const name = req.body.name;
     const email = req.body.email;
     const password = req.body.password;
     const image = req.file
     const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-
+    if (!errors.isEmpty() || !image) {
         return res.json({ errorMessage: errors.array()[0].msg, oldInput: { name: name, image: image, email: email, password: password } });
     }
     bcrypt.hash(password, 12)
         .then(hashedPassword => {
             const user = new User({ name: name, image: 'https://live-chat-scql.onrender.com/' + image.path.replace('\\', '/'), email: email, password: hashedPassword });
+
             return user.save();
         })
         .then(result => {
