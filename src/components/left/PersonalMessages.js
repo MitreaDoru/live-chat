@@ -75,7 +75,6 @@ const PersonalMessages = () => {
                             {isSearching && <input onClick={(e) => {
                                 e.stopPropagation();
                                 const newAgenda = agenda.map(user => (user.userId === contact.userId) ? { ...user, isChecked: !contact.isChecked } : user);
-                                console.log(contact);
                                 dispatch(chatAction.userAgenda(newAgenda));
                                 dispatch(chatAction.groupUsers(contact));
                             }
