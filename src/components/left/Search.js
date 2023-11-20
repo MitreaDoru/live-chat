@@ -41,6 +41,8 @@ const Search = () => {
         dispatch(chatAction.groupUsers(false));
         dispatch(chatAction.isSearching(false));
         dispatch(chatAction.createGroup(false));
+        dispatch(chatAction.groupName(''));
+        dispatch(chatAction.showGroupNameInput(false));
         dispatch(chatAction.error(''));
     }
 
