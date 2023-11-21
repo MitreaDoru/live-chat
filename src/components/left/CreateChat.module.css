@@ -14,6 +14,7 @@
   height: 3rem;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .action button {
@@ -21,6 +22,7 @@
   background-color: black;
   color: white;
   border-radius: 1rem;
+  cursor: pointer;
 }
 .action .groupImage {
   width: 20%;
@@ -31,6 +33,7 @@
   border-start-end-radius: 50%;
   border-bottom-left-radius: 50%;
   transform: rotate(-20deg);
+  cursor: pointer;
 }
 .action .groupImage input {
   width: 100%;
