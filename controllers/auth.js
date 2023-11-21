@@ -75,7 +75,7 @@ exports.postLogin = (req, res, next) => {
         });
 },
     exports.getFile = (req, res, next) => {
-        res.download('../server/images/' + req.params.path)
+        res.download('../images/' + req.params.path)
     }
 exports.postChangeImage = (req, res, next) => {
     const image = req.file;
