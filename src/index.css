@@ -10,5 +10,6 @@ html {
   font-family: "Noto Sans JP", sans-serif;
 }
 body {
-  background: linear-gradient(rgb(7, 7, 7), rgb(202, 184, 202));
+  height: 100vh;
+  background: linear-gradient(rgb(202, 184, 202), rgb(7, 7, 7));
 }
