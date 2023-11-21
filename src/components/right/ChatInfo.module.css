@@ -43,9 +43,11 @@
   background-color: rgb(100, 79, 97);
   color: white;
   border-radius: 1rem;
-  padding: 0.1rem;
+  padding: 0.3rem;
+  border: none;
   cursor: pointer;
 }
 .backButton {
   cursor: pointer;
+  border: none;
 }

@@ -23,6 +23,7 @@
   border-radius: 1rem;
   cursor: pointer;
   background-color: rgb(100, 79, 97);
+  border: none;
 }
 .action .groupImage {
   width: 20%;
