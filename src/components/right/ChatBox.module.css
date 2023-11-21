@@ -3,7 +3,11 @@
   height: 80%;
   padding: 1rem;
   padding-left: 2rem;
-  background-image: url("https://www.wallpapersales.uk.com/wp-content/uploads/2021/10/G78300.jpg");
+  background: linear-gradient(
+    rgb(179, 168, 177),
+    rgb(204, 192, 202),
+    rgb(179, 168, 177)
+  );
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;

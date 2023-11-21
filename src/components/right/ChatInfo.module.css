@@ -18,7 +18,7 @@
 }
 .conversationInfo {
   height: 100%;
-  background-color: rgb(230, 226, 226);
+  background-color: rgb(179, 168, 177);
 }
 
 .conversationInfo img {
@@ -40,7 +40,7 @@
   margin-right: 1rem;
 }
 .conversationInfo button {
-  background-color: black;
+  background-color: rgb(100, 79, 97);
   color: white;
   border-radius: 1rem;
   padding: 0.1rem;

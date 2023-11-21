@@ -2,7 +2,7 @@
   width: 100%;
   height: 3rem;
   position: fixed;
-  background-color: black;
+  background: radial-gradient(rgb(24, 23, 23), rgb(211, 167, 228));
   display: flex;
   justify-content: space-around;
   align-items: center;

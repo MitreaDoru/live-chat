@@ -16,7 +16,7 @@
   border: 1px solid black;
   border-radius: 2rem;
   display: flex;
-  background-color: white;
+  background-color: rgb(210, 200, 212);
   overflow: hidden;
 }
 
